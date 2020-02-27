@@ -1,1 +1,5 @@
-<app-post-create></app-post-create>
+<app-toolbar></app-toolbar>
+<main>
+    <app-post-create (postCreated)="onPostAdded($event)"></app-post-create>
+    <app-post-list [posts]="storedPost"></app-post-list>
+</main>

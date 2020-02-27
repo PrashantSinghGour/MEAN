@@ -1,0 +1,15 @@
+<mat-card>
+    <form (submit)="onAddPost(addPost)" #addPost="ngForm"> 
+        <mat-form-field>
+            <input matInput type="text" name="title" ngModel required #title="ngModel">
+            <mat-error *ngIf="title.invalid">Please add title</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea matInput rows="4" name="content" ngModel required #content="ngModel"></textarea>
+            <mat-error *ngIf="content.invalid">Please add Content</mat-error>
+        </mat-form-field>
+
+        <button color="accent" style="margin-top: 1rem;" mat-raised-button type="submit">Save Post</button>
+    </form>
+
+</mat-card>

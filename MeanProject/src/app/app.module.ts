@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostCreateComponent } from './Posts/post-create/post-create.component';
-import {FormsModule} from '@angular/forms';
 
+import {FormsModule} from '@angular/forms';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 // Material Design Dependencies
-import { MatInputModule,MatCardModule,MatButtonModule} from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule, MatExpansionModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostListComponent } from './post-list/post-list.component';
+import { PostCreateComponent } from './post-create/post-create.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PostCreateComponent
+    PostCreateComponent,
+    ToolbarComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
